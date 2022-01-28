@@ -179,6 +179,10 @@ def create_modules(module_defs, img_size, cfg):
             routs.extend([i + l if l < 0 else l for l in layers])
             modules = WeightedFeatureFusion(layers=layers, weight='weights_type' in mdef)
 
+        elif mdef['type'] == 'InstanceNormalization':
+            filters = output_filters[-1]
+            modules = nn.InstanceNorm2d(filters, momentum=0.03, eps=1E-4)
+
         elif mdef['type'] == 'reorg3d':  # yolov3-spp-pan-scale
             pass
 
