@@ -1,0 +1,5 @@
+classes = 1
+train  = data/MOT/train.txt
+valid  = data/MOT/test.txt
+names = data/MOT.names
+backup = backup/

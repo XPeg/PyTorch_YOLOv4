@@ -42,7 +42,7 @@ def test(data,
          save_dir=Path(''),  # for saving images
          save_txt=False,  # for auto-labelling
          save_conf=False,
-         plots=True,
+         plots=False,
          log_imgs=0):  # number of logged images
 
     # Initialize/load model and set device

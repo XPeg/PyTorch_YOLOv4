@@ -1,0 +1,10 @@
+# train and val datasets (image directory or *.txt file with image paths)
+train: ./data/MOT/train05.txt  # 118k images
+val: ./data/MOT/val05.txt  # 5k images
+#test: ./data/MOT/test.txt  # 20k images for submission to https://competitions.codalab.org/competitions/20794
+test: ./data/MOT/val05.txt
+# number of classes
+nc: 1
+
+# class names
+names: ['person']
